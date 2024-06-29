@@ -4,11 +4,11 @@
 
 En la tabla inferior puedes ver que versiones aun tienen soporte.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.3   | :white_check_mark: |
-| 1.0.2   | :white_check_mark: |
-| < 1.0   | :x:                |
+| Version | Supported    |
+| ------- | --------     |
+| 1.0.3   | ✅          |
+| 1.0.2   | ✅          |     
+| < 1.0   | ❌          | 
 
 ## Reporting a Vulnerability
 
