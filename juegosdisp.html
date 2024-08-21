@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TortleGames - Juegos Disponibles</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="TortleGames" name="keywords">
+    <meta content="Jueguitos para disfrutar :D" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+<style>
+    :root {
+        --primary-color: #4a4af4;
+        --secondary-color: #f44a4a;
+        --background-color: #f0f2f5;
+        --card-background: #ffffff;
+        --text-color: #333333;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+    .banner {
+        background: linear-gradient(rgba(74, 74, 244, 0.8), rgba(74, 74, 244, 0.8)), url('/placeholder.svg?height=400&width=1200') center/cover no-repeat;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--secondary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: background-color 0.3s, transform 0.3s;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .btn:hover {
+        background-color: #e04141;
+        transform: translateY(-3px);
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .category {
+        background-color: var(--card-background);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .category:hover {
+        transform: translateY(-5px);
+    }
+    .category-icon {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .game-card {
+        background-color: var(--card-background);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .game-card:hover {
+        transform: translateY(-5px);
+    }
+    .game-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .game-info {
+        padding: 20px;
+    }
+    .game-title {
+        margin: 0 0 10px 0;
+        font-size: 1.2em;
+        color: var(--primary-color);
+    }
+    .game-description {
+        margin: 0 0 15px 0;
+        color: #666;
+    }
+    .game-category {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 20px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+    .recommended-games {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+    }
+    .recommended-game {
+        display: inline-block;
+        width: 200px;
+        margin-right: 20px;
+        vertical-align: top;
+        white-space: normal;
+    }
+    .recommended-game img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    @media (max-width: 768px) {
+        .banner {
+            height: 300px;
+        }
+        .games-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+</style>
+<body>
+    <body>
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0 nav-bar">
+            <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+                <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                    <h1 class="m-0 display-4 text-uppercase text-white"></h1> <img
+                    src="img/tortle.png"
+                    alt="Tortuga"
+                    width="50"
+                    height="50"
+                    title="TortleGames Inicio" />
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto p-4">
+                        <a href="index.html" class="nav-item nav-link active">Inicio</a>     
+                        <a href="https://tortlegames.github.io/login/" class="nav-item nav-link">Iniciar sesión</a>                        
+                        <a href="https://discord.gg/9z6GM5Ejwk" class="nav-item nav-link">Nuestro Discord!</a>                                  
+                        <a href="https://docs.google.com/document/d/12yRSf1Crwi752y0mGalbT22JDbas5xWcp_tC0yMc8uQ/edit?usp=sharing" class="nav-item nav-link">Documento explicativo</a>                                                                   
+                        <a href="juegosdisp.html" class="nav-item nav-link">Juegos disponibles</a>                                                                                           
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+    
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Juegos Disponibles</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <center>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="img/juego1.png" alt="Cookie" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">CookieClicker</h3>
+                    <p class="game-description">Cookie clicker es un juego en el cual debes de darle click a una galletita tantas veces como puedas! (recomendamos gratamente el uso de un mouse)</p>
+                    <span class="game-category"><a href = "Games/Cookie/index.html">Jugar Ahora!</a></span>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="img/juego2.jpg" alt="Minecra" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">Minecraft (Eaglercraft)</h3>
+                    <p class="game-description">Minecraft es uno de los mejores juegos del mundo! Crea tu propio mundo con tus amigos y juega en linea! (Creditos a los creadores de eaglercraft)</p>
+                    <span class="game-category"><a href = "Games/Minecraft/index.html">Jugar Ahora! 1.5</a></span>
+                    <span class="game-category"><a href = "Games/Minecraft 1.8/index.html">Jugar Ahora! 1.8</a></span>
+                    <span class="game-category"><a href = "Games/Minecraft 1.12/index.html">Jugar Ahora! 1.12</a></span>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Mind Bender" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">Mind Bender</h3>
+                    <p class="game-description">Pon a prueba tu ingenio con rompecabezas mentales desafiantes.</p>
+                    <span class="game-category">Puzzle</span>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Soccer Star" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">Soccer Star</h3>
+                    <p class="game-description">Conviértete en una leyenda del fútbol y lleva a tu equipo a la gloria.</p>
+                    <span class="game-category">Deportes</span>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Soccer Star" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">Soccer Star</h3>
+                    <p class="game-description">Conviértete en una leyenda del fútbol y lleva a tu equipo a la gloria.</p>
+                    <span class="game-category">Deportes</span>
+                </div>
+            </div>
+            <div class="game-card">
+                <img src="/placeholder.svg?height=200&width=300" alt="Soccer Star" class="game-image">
+                <div class="game-info">
+                    <h3 class="game-title">Soccer Star</h3>
+                    <p class="game-description">Conviértete en una leyenda del fútbol y lleva a tu equipo a la gloria.</p>
+                    <span class="game-category">Deportes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
