@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oops! - TortleGames</title>
+  <style>
+        body {
+            background-color: #FBFCFC;
+            color: #1C2833;
+            font-family: Calibri, Arial, sans-serif;
+            max-width: 800px; /* Ancho máximo del contenido */
+            margin: 0 auto; /* Centrar el contenido */
+            padding: 20px; /* Espaciado interior */
+        }
+        .limite {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+	<body>
+	<body bgcolor="#FBFCFC">
+	<font color="#1C2833" face = "calibri">
+
+  	<div class="limite">  
+  <h1>PRECAUCION!</h1>
+  <h2>Le recomendamos hacer una copia de seguridad cada que modifique sus niveles en este videojuego!!</h2>
+  <h2>Porque se pueden perder muy facilmente</h2>
+  <h2>Ni los de tortlegames team ni los chicos de Level Share Square nos hacemos responsables por las perdidas.</h2>
+  <a href = "MARIO.html">Continuar</a>
+</div>  
+
+</body>
+</html>
