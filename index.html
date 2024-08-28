@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TortleGames Title Screen</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00ff, #0a0a0a, #ff8800, #312d31);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        .title {
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s ease;
+        }
+        .title.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+            letter-spacing: 5px;
+        }
+        .year {
+            font-size: 4rem;
+            color: #ff9900;
+            text-shadow: 0 0 10px rgb(255, 255, 0);
+        }
+        .start-button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+        .start-button:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+        .dancer {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <div class="title">
+            <h1>TortleGames 🐢</h1>
+            <p class="year">2024 Edition</p>
+        </div>
+        <button class="start-button"><a href = "index1.html">Iniciar</a></button>
+    </div>
+
+    <script>
+        // Show title with delay
+        setTimeout(() => {
+            document.querySelector('.title').classList.add('show');
+        }, 1000);
+
+
+        // Dancer animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes dance {
+                0% { transform: translateY(0) rotate(0deg); }
+                100% { transform: translateY(-20px) rotate(10deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        createDancers();
+    </script>
+    <audio src="titlemusic.mp3" loop="3" autoplay="true"></audio>
+</body>
+</html>

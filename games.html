@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>TortleGames Game Selector 2024</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+                
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-festava-live.css" rel="stylesheet">
+        
+    </head>
+    <style>
+        :root {
+            --game-title: #000000;
+            --primary-color: #dbf44a;
+            --secondary-color: #f44a4a;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333333;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        .category-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .game-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        .game-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .game-info {
+            padding: 20px;
+        }
+        .game-title {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+            color: var(--game-title);
+        }
+        .game-description {
+            margin: 0 0 15px 0;
+            color: #666;
+        }
+        .game-category {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: var(--game-title);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+        .recommended-games {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        .recommended-game {
+            display: inline-block;
+            width: 200px;
+            margin-right: 20px;
+            vertical-align: top;
+            white-space: normal;
+        }
+        .recommended-game img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        @media (max-width: 768px) {
+            .banner {
+                height: 300px;
+            }
+            .games-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+    <body>
+
+        <main>
+
+            <header class="site-header">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-12 col-12 d-flex flex-wrap">
+                            <p class="d-flex me-4 mb-0">
+                                <i class="bi-person custom-icon me-2"></i>
+                                <strong class="text-dark">Bienvenido a nuestro nuevo diseño de TortleGames! / Fecha de fin de soporte de TortleGames Old: Se especifica al final de la pagina.</strong>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        TortleGames 🐢
+                    </a>
+
+                    <a href="games.html" class="btn custom-btn d-lg-none ms-auto me-4">Juegos Disponibles</a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Inicio</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">Sobre nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index1.html">TortleGames OG (Abandonware)</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_3">Nuestros Terminos (Entrar)</a>
+                            </li>
+                        </ul>
+
+                        <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Juegos Disponibles</a>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section class="hero-section" id="section_1">
+                <div class="section-overlay"></div>
+
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="row">
+
+                        <div class="col-12 mt-auto mb-5 text-center">
+                            <small>TortleGames</small>
+
+                            <h1 class="text-white mb-5">Juegos disponibles!</h1>
+
+                            <a class="btn custom-btn smoothscroll" href="games.html">A jugar!</a>
+                        </div>
+
+                        <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                            <div class="date-wrap">
+                                <h5 class="text-white">
+                                    <i class="custom-icon bi-clock me-2"></i>
+                                    Horario de Soporte: Diario - 4 PM - 9 PM
+                                </h5>
+                            </div>
+
+                            <div class="location-wrap mx-auto py-3 py-lg-0">
+                                <h5 class="text-white">
+                                </h5>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon d-flex align-items-center justify-content-center">
+                                    <span class="text-white me-3">Compartir:</span>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link">
+                                            <span class="bi-facebook"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link">
+                                            <span class="bi-twitter"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="#" class="social-icon-link">
+                                            <span class="bi-instagram"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrap">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                        <source src="fondo.mp4" type="video/mp4">
+
+                        Su navegador no soporta video.
+                    </video>
+                </div>
+            </section>
+
+<center>
+            <section class="about-section section-padding" id="section_2">
+                <div class="games-grid">
+                    <div class="game-card">
+                        <img src="img/juego1.png" alt="Cookie" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">CookieClicker</h3>
+                            <p class="game-description">Cookie clicker es un juego en el cual debes de darle click a una galletita tantas veces como puedas! (recomendamos gratamente el uso de un mouse)</p>
+                            <span class="game-category"><a href = "Games/Cookie/indexg.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/juego2.jpg" alt="Minecra" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Minecraft (Eaglercraft)</h3>
+                            <p class="game-description">Minecraft es uno de los mejores juegos del mundo! Crea tu propio mundo con tus amigos y juega en linea! (Creditos a los creadores de eaglercraft)</p>
+                            <span class="game-category"><a href = "Games/Minecraft/index.html">Jugar Ahora! 1.5</a></span>
+                            </br>
+                            <span class="game-category"><a href = "Games/Minecraft 1.8/index.html">Jugar Ahora! 1.8</a></span>
+                            </br>
+                            <span class="game-category"><a href = "Games/Minecraft 1.12/index.html">Jugar Ahora! 1.12</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/slope.jpg" alt="mairo64" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Slope</h3>
+                            <p class="game-description">Probemos tu paciencia ingenio esquivando obstaculos, y no revientes tu computadora por morir de maneras tontas.</p>
+                            <span class="game-category"><a href = "Games/Slope/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/service-3.jpg" alt="Deberias rendirte... (EkLAsLa191Al)" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Super Mario 64</h3>
+                            <p class="game-description">Super Mario 64 es un juego de los mejores! Derrota a bowser para rescatar a la princesa una vez mas! (Creditos en su totalidad a nintendo!) (Miyamoto soy tu fan)</p>
+                        <span class="game-category"><a href = "Games/SM64/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/service-4.jpg" alt="carreras" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Mario Kart 64</h3>
+                            <p class="game-description">Mario Kart 64, juega a las carreritas con tus amigos en un mismo lugar! Con los personajes de mario bros! (Creditos en su totalidad a nintendo!) (Miyamoto soy tu fan)</p>
+                        <span class="game-category"><a href = "Games/MarioKart64/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/1v1.jpg" alt="disparos alv" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">1v1.lol</h3>
+                            <p class="game-description">Es hora de ir a latinoamerica 😎, Juega y disparales a cualquiera que te encuentres y se el ultimo en sobrevivir para ganar la batalla!</p>
+                        <span class="game-category"><a href = "Games/1v1/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/totm.jpg" alt="pacman chafa" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Tomb of the Mask</h3>
+                            <p class="game-description">En mapas complicados, ve recogiendo los puntitos y esquivando obstaculos hasta llegar a la meta!</p>
+                        <span class="game-category"><a href = "Games/totm/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/emusupreme.png" alt="pacman chafa" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">EmuSupreme</h3>
+                            <p class="game-description">¿Eres de esos jovenes que aun saben lo bellos que son los juegos retro? Pues este emulador te encantara!</p>
+                        <span class="game-category"><a href = "Games/EmuSupreme/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/mania.jpg" alt="Sanic" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Sonic Mania</h3>
+                            <p class="game-description">Acompaña a sonic con una aventura nueva! (El menu no sirve por las capacidades de la chrome), al entrar al juego presiona ESCAPE (ESC) para abrir el mod menu y poner tu nivel.</p>
+                        <span class="game-category"><a href = "https://tortlegames.github.io/SonicManiaWeb/RSDKv5.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/SBS.jpeg" alt="Ladron CTM XD" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Subway Surfers</h3>
+                            <p class="game-description">Eres un morro que decidio pintar sus obras de arte en un tren, pero la policia te cacho y ahora debes huir.</p>
+                        <span class="game-category"><a href = "https://tortlegames.github.io/subwaysurfers/subway/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/SMC.jpeg" alt="Maker" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Super Mario Construct (SMC)</h3>
+                            <p class="game-description">En este hermoso juego podras crear tus propios niveles asi como mario maker, este titulo propiedad de los chicos de Level Share Square (LSS) permite crear y compartir tus niveles! (Si gustas compartir tus niveles con la gente puedes usar nuestro server de discord y/o la pagina oficial de Level Share Square)</p>
+                        <span class="game-category"><a href = "Games/precaucionsmc.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/Yoshi.jpg" alt="Maker" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Yoshi's Fabrication Station</h3>
+                            <p class="game-description">En este hermoso juego podras crear tus propios niveles asi como mario maker pero en modo yoshi, este titulo propiedad de los chicos de Level Share Square (LSS) permite crear y compartir tus niveles! (Si gustas compartir tus niveles con la gente puedes usar nuestro server de discord y/o la pagina oficial de Level Share Square)</p>
+                        <span class="game-category"><a href = "Games/precaucionyoshi.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/FNAF.jpeg" alt="Maker" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Five Nights at Freddy's 1</h3>
+                            <p class="game-description">Quieres chambear en una pizzeria en la cual abunde el terror? Juega este juego el cual probablemente te saque un sustito. QUE MIEDO!! UNA IMAGEN .PNG DE FREDDY 😱</p>
+                        <span class="game-category"><a href = "Games/FNAF1/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/FYW.jpeg" alt="Fuego + Awa" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Fireboy and Watergirl 1</h3>
+                            <p class="game-description">Llego el momento de trabajar el trabajo en equipo, invita a un amigo y entre ustedes pasense mapas, y no exploten el lugar donde esten solo por coraje.</p>
+                        <span class="game-category"><a href = "Games/fuegoyawita/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/dinoo.jpeg" alt="Porque chucha las escuelas bloquean el dino original? :c" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">Dino 3D</h3>
+                            <p class="game-description">Es lo mismo que el dino de chrome, pero en 3D.</p>
+                        <span class="game-category"><a href = "Games/dino3d/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="img/run3.jpeg" alt="Porque chucha las escuelas bloquean al kirby chafa? :c" class="game-image">
+                        <div class="game-info">
+                            <h3 class="game-title">RUN 3</h3>
+                            <p class="game-description">Ve por el camino y no choques ni te caigas!</p>
+                        <span class="game-category"><a href = "Games/run3-main/index.html">Jugar Ahora!</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="schedule-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">Nuestros Terminos:</h1>
+
+                            <div class="table-responsive">
+                                <table class="schedule-table table table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Documento Explicativo:</th>
+
+                                            <th scope="col">Servidor de discord:</th>
+
+                                            <th scope="col">Nuestra Historia (Pagina en beta):</th>
+
+                                            <th scope="col">Nuestra Vision (Pagina en beta):</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><a href = "https://docs.google.com/document/d/12yRSf1Crwi752y0mGalbT22JDbas5xWcp_tC0yMc8uQ/edit">Entrar</a></th>
+                
+                                            <td class="table-background-image-wrap country-background-image">
+                                                <a href = "https://discord.gg/9z6GM5Ejwk">Entrar</a>
+                                            </td>
+
+                                            <td class="table-background-image-wrap country-background-image">
+                                                <a href = "nuestrahistoria.html">Entrar</a>
+                                            </td>
+                                            <td>
+                                                <a href = "nuestravision.html">Entrar</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <footer class="site-footer">
+            <div class="site-footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="text-white mb-lg-0">TortleGames</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                            <ul class="social-icon d-flex justify-content-lg-end">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-twitter"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-apple"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link">
+                                        <span class="bi-pinterest"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<center>
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h5 class="site-footer-title mb-3">¿Tienes dudas? Contactanos!</h5>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 090-080-0760" class="site-footer-link">
+                                Puedes unirte al servidor oficial de discord, o enviar un mail al siguiente correo: tortlegamesofficial@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                        <h5 class="site-footer-title mb-3">Fecha de fin de soporte (TortleGames OG):</h5>
+
+                        <p class="text-white d-flex mt-3 mb-2">
+                        <p>Tenemos planeado finalizar el soporte de TortleGames OG a mitades del 2025</p>
+
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-12 mt-5">
+                            <p class="copyright-text">Copyright © Flask</p>
+                            <p>Designed and programmed - Flask</p>
+                            <p>Help with support and also programmed - Reycorajr</p>
+                        </div>
+
+                        <div class="col-lg-8 col-12 mt-lg-5">
+                            <ul class="site-footer-links">
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Terminos &amp; Condiciones</a>
+                                </li>
+
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Politica de privacidad</a>
+                                </li>
+
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Su opinion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Archivos JAVASCRIPT (Isaac, no los toques a no ser qu vayas a agregar mas,) -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+        <audio src="Songs/mainmus.mp3" loop="3" autoplay="true">
+
+    </body>
+</html>
